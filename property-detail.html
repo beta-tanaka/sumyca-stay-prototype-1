@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デザイナーズ 1LDK 原宿 — sumyca stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">sumyca <span>stay</span></a>
+      <nav class="header__nav">
+        <a href="search.html">物件を探す</a>
+      </nav>
+      <div class="header__actions">
+        <a href="search.html" class="btn btn--accent btn--sm">今すぐ予約する</a>
+        <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mm">
+    <button class="mobile-menu__close" onclick="document.getElementById('mm').classList.remove('open')">✕</button>
+    <div class="mobile-menu__logo">sumyca <span>stay</span></div>
+    <nav class="mobile-menu__nav">
+      <a href="search.html">物件を探す</a>
+    </nav>
+    <div class="mobile-menu__actions">
+      <a href="search.html" class="btn btn--accent btn--lg btn--block">今すぐ予約する</a>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="detail-gallery">
+    <div class="detail-gallery__item">
+      <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900&h=800&fit=crop" alt="">
+    </div>
+    <div class="detail-gallery__item">
+      <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop" alt="">
+    </div>
+    <div class="detail-gallery__item">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop" alt="">
+    </div>
+    <div class="detail-gallery__item">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" alt="">
+    </div>
+    <div class="detail-gallery__item">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&h=400&fit=crop" alt="">
+    </div>
+  </div>
+
+  <!-- Detail layout -->
+  <div class="detail-layout">
+
+    <!-- Main content -->
+    <div class="detail-main">
+      <h1 class="detail-main__title">デザイナーズ 1LDK 原宿</h1>
+      <p class="detail-main__location">
+        <span>📍</span> 東京都渋谷区神宮前 · 表参道駅 徒歩 3 分 · 原宿駅 徒歩 5 分
+      </p>
+      <div class="detail-main__meta">
+        <span><strong>1〜2名</strong></span>
+        <span><strong>1</strong> ベッドルーム</span>
+        <span><strong>1</strong> バスルーム</span>
+        <span><strong>45</strong> m²</span>
+        <span><span style="color:var(--star)">★</span> <strong>4.89</strong> (48件)</span>
+      </div>
+
+      <!-- Description -->
+      <div class="detail-section">
+        <h3>物件について</h3>
+        <p>表参道・原宿エリアに位置するデザイナーズ1LDK。インテリアデザイナーが手がけたモダンな空間で、ショッピングや観光の拠点に最適です。キッチン・洗濯機完備で長期滞在にも対応。スマートロックで24時間いつでも入室できます。</p>
+      </div>
+
+      <!-- Amenities -->
+      <div class="detail-section">
+        <h3>設備・アメニティ</h3>
+        <div class="amenity-grid">
+          <div class="amenity"><span class="amenity__icon">📶</span> 高速 Wi-Fi</div>
+          <div class="amenity"><span class="amenity__icon">🍳</span> キッチン</div>
+          <div class="amenity"><span class="amenity__icon">🧺</span> 洗濯機</div>
+          <div class="amenity"><span class="amenity__icon">❄️</span> エアコン</div>
+          <div class="amenity"><span class="amenity__icon">📺</span> テレビ</div>
+          <div class="amenity"><span class="amenity__icon">🪑</span> ワークデスク</div>
+          <div class="amenity"><span class="amenity__icon">☕</span> コーヒーメーカー</div>
+          <div class="amenity"><span class="amenity__icon">🛁</span> バスタブ</div>
+          <div class="amenity"><span class="amenity__icon">🔑</span> スマートロック</div>
+        </div>
+      </div>
+
+      <!-- Cancellation policy -->
+      <div class="detail-section">
+        <h3>キャンセルポリシー</h3>
+        <div class="cancel-policy">
+          <div class="cancel-policy__icon">✓</div>
+          <div>
+            <h4>前日 24 時まで無料キャンセル</h4>
+            <p>チェックイン前日の 24:00 まではキャンセル料ゼロ。それ以降は 1 泊分が発生します。急な予定変更でも安心してご予約ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Check-in info -->
+      <div class="detail-section">
+        <h3>チェックイン / アウト</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:20px;text-align:center;">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--gray-3);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;">チェックイン</div>
+            <div style="font-size:2rem;font-weight:900;">15:00</div>
+            <div style="font-size:0.8125rem;color:var(--gray-4);margin-top:4px;">スマートロック自動開錠</div>
+          </div>
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:20px;text-align:center;">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--gray-3);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;">チェックアウト</div>
+            <div style="font-size:2rem;font-weight:900;">11:00</div>
+            <div style="font-size:0.8125rem;color:var(--gray-4);margin-top:4px;">鍵はそのままで OK</div>
+          </div>
+        </div>
+        <p style="font-size:0.8125rem;color:var(--gray-4);margin-top:12px;">フロントスタッフ対応なし。PIN コードは予約確定後 SMS でお届けします。</p>
+      </div>
+
+      <!-- Reviews summary -->
+      <div class="detail-section">
+        <h3>口コミ</h3>
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+          <div style="font-size:3.5rem;font-weight:900;line-height:1;">4.89</div>
+          <div>
+            <div style="color:var(--star);font-size:1.25rem;letter-spacing:2px;">★★★★★</div>
+            <div style="font-size:0.875rem;color:var(--gray-4);margin-top:4px;">48 件の口コミ</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:16px 20px;">
+            <div style="font-size:0.8125rem;font-weight:700;margin-bottom:4px;">清潔さ</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:4px;background:var(--gray-2);border-radius:2px;overflow:hidden;"><div style="width:97%;height:100%;background:var(--black);border-radius:2px;"></div></div>
+              <span style="font-size:0.875rem;font-weight:700;">4.9</span>
+            </div>
+          </div>
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:16px 20px;">
+            <div style="font-size:0.8125rem;font-weight:700;margin-bottom:4px;">立地</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:4px;background:var(--gray-2);border-radius:2px;overflow:hidden;"><div style="width:98%;height:100%;background:var(--black);border-radius:2px;"></div></div>
+              <span style="font-size:0.875rem;font-weight:700;">4.9</span>
+            </div>
+          </div>
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:16px 20px;">
+            <div style="font-size:0.8125rem;font-weight:700;margin-bottom:4px;">設備</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:4px;background:var(--gray-2);border-radius:2px;overflow:hidden;"><div style="width:87%;height:100%;background:var(--black);border-radius:2px;"></div></div>
+              <span style="font-size:0.875rem;font-weight:700;">4.8</span>
+            </div>
+          </div>
+          <div style="background:var(--gray-1);border-radius:var(--r-md);padding:16px 20px;">
+            <div style="font-size:0.8125rem;font-weight:700;margin-bottom:4px;">コスパ</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:4px;background:var(--gray-2);border-radius:2px;overflow:hidden;"><div style="width:90%;height:100%;background:var(--black);border-radius:2px;"></div></div>
+              <span style="font-size:0.875rem;font-weight:700;">4.8</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking widget -->
+    <div>
+      <div class="booking-widget">
+        <div class="booking-widget__price">¥18,900 <span>/ 泊（税込）</span></div>
+        <div class="booking-widget__rating">
+          <span class="booking-widget__rating-star">★</span>
+          <strong>4.89</strong>
+          <span style="color:var(--gray-3);">(48件)</span>
+        </div>
+
+        <div class="booking-date-grid">
+          <div class="booking-date-field">
+            <div class="booking-date-field__label">チェックイン</div>
+            <div class="booking-date-field__val booking-date-field__val--empty">日付を選択</div>
+          </div>
+          <div class="booking-date-field">
+            <div class="booking-date-field__label">チェックアウト</div>
+            <div class="booking-date-field__val booking-date-field__val--empty">日付を選択</div>
+          </div>
+        </div>
+
+        <div class="booking-guest-field">
+          <div>
+            <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;">ゲスト</div>
+            <div style="font-size:0.9375rem;font-weight:600;margin-top:2px;">2名</div>
+          </div>
+          <span style="color:var(--gray-3);">▼</span>
+        </div>
+
+        <!-- OTA comparison -->
+        <div class="booking-widget__ota">
+          Airbnb 掲載価格 <strong>¥22,200</strong> より<br>
+          <strong style="color:#16a34a;">¥3,300（15%）お得</strong>
+        </div>
+
+        <div class="booking-breakdown">
+          <div class="booking-breakdown__row">
+            <span>¥18,900 × 3泊</span>
+            <span>¥56,700</span>
+          </div>
+          <div class="booking-breakdown__row booking-breakdown__save">
+            <span>公式割引 (15%)</span>
+            <span>− ¥8,505</span>
+          </div>
+          <div class="booking-breakdown__row booking-breakdown__row--total">
+            <span>合計（税込）</span>
+            <span>¥48,195</span>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn--accent btn--lg btn--block" style="margin-bottom:12px;">予約する</a>
+        <p style="font-size:0.75rem;color:var(--gray-3);text-align:center;">前日 24 時まで無料キャンセル · 今は請求なし</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">sumyca <span>stay</span></div>
+        <p class="footer__desc">全国の民泊・短期滞在施設を、直接予約で最安値保証。フロントなし、PIN セルフ入室。</p>
+      </div>
+      <div class="footer__col">
+        <h4>エリア</h4>
+        <a href="#">東京</a>
+        <a href="#">大阪</a>
+        <a href="#">京都</a>
+        <a href="#">福岡</a>
+        <a href="#">沖縄</a>
+      </div>
+      <div class="footer__col">
+        <h4>サポート</h4>
+        <a href="#">よくある質問</a>
+        <a href="#">キャンセルポリシー</a>
+        <a href="#">利用規約</a>
+        <a href="#">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 sumyca stay. All rights reserved.</span>
+      <div class="payment-icons">
+        <span class="payment-icon">VISA</span>
+        <span class="payment-icon">MC</span>
+        <span class="payment-icon">AMEX</span>
+        <span class="payment-icon">PayPay</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
