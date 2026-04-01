@@ -47,7 +47,7 @@ button { cursor: pointer; font-family: inherit; }
 
 body {
   font-family: var(--font);
-  color: var(--black);
+  color: var(--dark);
   background: var(--white);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
