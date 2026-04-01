@@ -1,9 +1,84 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>物件を探す — sumyca stay</title>
+
+  <!-- SEO: Core meta -->
+  <title>東京・大阪・京都の民泊を直接予約 | 物件一覧 — sumyca stay</title>
+  <meta name="description" content="sumyca stay の民泊・短期滞在物件一覧。東京・大阪・京都・福岡・沖縄など全国241件以上。OTAより15%安い直接予約、当日キャンセル無料、24時間PINチェックイン対応。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://beta-tanaka.github.io/sumyca-stay-prototype-1/search.html">
+
+  <!-- SEO: Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="sumyca stay">
+  <meta property="og:title" content="民泊物件を探す | sumyca stay — OTAより15%安い直接予約">
+  <meta property="og:description" content="全国の民泊・短期滞在施設を直接予約。エリア・日程・人数で絞り込み可能。当日キャンセル無料。">
+  <meta property="og:url" content="https://beta-tanaka.github.io/sumyca-stay-prototype-1/search.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=630&fit=crop">
+
+  <!-- AIO: JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/" },
+          { "@type": "ListItem", "position": 2, "name": "物件を探す", "item": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/search.html" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "sumyca stay 民泊物件一覧（東京）",
+        "description": "東京の民泊・短期滞在物件。直接予約でOTAより15%安く宿泊できます。",
+        "numberOfItems": 5,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "デザイナーズ 1LDK 原宿",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=520&h=360&fit=crop",
+              "address": { "@type": "PostalAddress", "addressLocality": "渋谷区", "addressRegion": "東京都", "addressCountry": "JP" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.89", "reviewCount": "48" },
+              "offers": { "@type": "Offer", "price": "18900", "priceCurrency": "JPY", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "18900", "priceCurrency": "JPY", "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitText": "泊" } } }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "ヴィンテージ スタジオ 渋谷",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "address": { "@type": "PostalAddress", "addressLocality": "渋谷区", "addressRegion": "東京都", "addressCountry": "JP" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.72", "reviewCount": "33" },
+              "offers": { "@type": "Offer", "price": "13260", "priceCurrency": "JPY" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "モダン 2K 新宿ガーデン",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "address": { "@type": "PostalAddress", "addressLocality": "新宿区", "addressRegion": "東京都", "addressCountry": "JP" },
+              "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.81", "reviewCount": "57" },
+              "offers": { "@type": "Offer", "price": "16490", "priceCurrency": "JPY" }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -62,8 +137,10 @@
     </div>
   </div>
 
+  <main id="main-content">
+
   <!-- Search topbar -->
-  <div class="search-topbar">
+  <div class="search-topbar" role="search" aria-label="物件検索">
     <div class="search-topbar__inner">
       <div class="search-topbar__field">
         <div>
@@ -318,8 +395,10 @@
     </div>
   </div>
 
+  </main><!-- /main -->
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" aria-label="サイトフッター">
     <div class="footer__inner">
       <div>
         <div class="footer__brand">sumyca <span>stay</span></div>

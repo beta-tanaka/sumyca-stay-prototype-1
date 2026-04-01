@@ -1,9 +1,220 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sumyca stay — 直接予約で、最安値。</title>
+
+  <!-- =====================================================
+       SEO: Core meta
+  ====================================================== -->
+  <title>sumyca stay | 民泊・短期滞在の直接予約プラットフォーム — OTAより15%安く</title>
+  <meta name="description" content="sumyca stay（スミカステイ）は東京・大阪・京都など全国の民泊・マンスリー物件を直接予約できるプラットフォーム。Airbnb・Booking.comより常時15%安く、当日キャンセル無料。フロント不要のPINセルフチェックインで24時間対応。">
+  <meta name="keywords" content="民泊,短期滞在,マンスリーマンション,直接予約,東京民泊,大阪民泊,京都民泊,vacation rental,民泊予約,sumyca stay">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="sumyca stay">
+  <link rel="canonical" href="https://beta-tanaka.github.io/sumyca-stay-prototype-1/">
+
+  <!-- =====================================================
+       SEO: Open Graph (SNS・AIクローラー向け)
+  ====================================================== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="sumyca stay">
+  <meta property="og:title" content="sumyca stay | 民泊・短期滞在の直接予約 — OTAより15%安く">
+  <meta property="og:description" content="全国の民泊・短期滞在施設を直接予約。Airbnb・Booking.comより常時15%安く、当日キャンセル無料。24時間PINセルフチェックイン。">
+  <meta property="og:url" content="https://beta-tanaka.github.io/sumyca-stay-prototype-1/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=630&fit=crop">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- =====================================================
+       SEO: Twitter / X Card
+  ====================================================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="sumyca stay | 直接予約で、最安値。">
+  <meta name="twitter:description" content="民泊・短期滞在の直接予約プラットフォーム。OTAより15%安く、当日キャンセル無料。">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&h=630&fit=crop">
+
+  <!-- =====================================================
+       AIO: JSON-LD Structured Data
+       - Organization（会社エンティティ）
+       - WebSite + SearchAction（サイト内検索）
+       - ItemList（おすすめ物件リスト）
+       - FAQPage（よくある質問）
+  ====================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#organization",
+        "name": "sumyca stay",
+        "alternateName": "スミカステイ",
+        "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/og-image.png"
+        },
+        "description": "東京・大阪・京都など全国の民泊・短期滞在施設を直接予約できるプラットフォーム。OTA手数料不要で常時最安値保証。",
+        "foundingDate": "2024",
+        "areaServed": {
+          "@type": "Country",
+          "name": "日本"
+        },
+        "serviceType": ["民泊予約", "バケーションレンタル", "短期賃貸", "マンスリーマンション"],
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#website",
+        "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/",
+        "name": "sumyca stay",
+        "description": "民泊・短期滞在の直接予約プラットフォーム",
+        "publisher": { "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/search.html?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#webpage",
+        "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/",
+        "name": "sumyca stay — 直接予約で、最安値。",
+        "isPartOf": { "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#website" },
+        "about": { "@id": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/#organization" },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero__title", ".hero__sub", ".value-prop__title", ".value-prop__desc"]
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "sumyca stay 人気の民泊物件",
+        "description": "東京・大阪・京都など全国の人気民泊物件一覧",
+        "numberOfItems": 3,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "デザイナーズ 1LDK 原宿",
+              "description": "表参道・原宿エリアのデザイナーズ1LDK。キッチン・洗濯機完備。スマートロック24時間入室可。",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=440&fit=crop",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "渋谷区",
+                "addressRegion": "東京都",
+                "addressCountry": "JP"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.89",
+                "reviewCount": "48",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "priceRange": "¥18,900〜/泊"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "ミニマル和モダン 難波",
+              "description": "大阪・難波エリアの和モダンスタジオ。キッチン完備。なんば駅徒歩3分。",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=440&fit=crop",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "中央区",
+                "addressRegion": "大阪府",
+                "addressCountry": "JP"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.76",
+                "reviewCount": "62",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "priceRange": "¥14,280〜/泊"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "LodgingBusiness",
+              "name": "築100年古民家リノベ 東山",
+              "description": "京都・東山の古民家リノベ物件。祇園四条駅徒歩10分。最大4名。庭付き。",
+              "url": "https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html",
+              "image": "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=440&fit=crop",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "東山区",
+                "addressRegion": "京都府",
+                "addressCountry": "JP"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.94",
+                "reviewCount": "31",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "priceRange": "¥21,600〜/泊"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "sumyca stay で予約するとなぜ安いのですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "OTA（Airbnb・Booking.comなど）の仲介手数料が不要なため、公式サイトから直接予約すると常時15%割安になります。最低価格保証付きで、差額が発生した場合は返金します。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "チェックインはどうやってするのですか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "予約確定後にSMSでPINコードをお届けします。スマートロックにPINを入力するだけでフロントスタッフ対応なしに24時間入室できます。深夜・早朝のチェックインも可能です。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "キャンセルポリシーはどうなっていますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "チェックイン前日の24:00まで無料でキャンセルできます。それ以降は1泊分のキャンセル料が発生します。急な予定変更にも対応できる柔軟なポリシーです。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "どのエリアの物件がありますか？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "東京・大阪・京都・福岡・沖縄・北海道など全国の主要都市をカバーしています。物件数は随時拡大中です。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -37,8 +248,10 @@
     </div>
   </div>
 
+  <main id="main-content">
+
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" aria-label="メインビジュアル">
     <div class="hero__bg"></div>
     <div class="hero__img">
       <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1800&h=1000&fit=crop" alt="">
@@ -103,11 +316,11 @@
   </div>
 
   <!-- Featured properties -->
-  <section class="section" style="padding-top: 80px;">
+  <section class="section" style="padding-top: 80px;" aria-labelledby="featured-heading">
     <div class="container">
       <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;">
         <div>
-          <h2>人気の物件</h2>
+          <h2 id="featured-heading">人気の物件</h2>
           <p>今週の予約ランキング</p>
         </div>
         <a href="search.html" class="btn btn--outline btn--sm">すべて見る →</a>
@@ -183,10 +396,10 @@
   </section>
 
   <!-- How it works -->
-  <section class="section section--gray">
+  <section class="section section--gray" aria-labelledby="how-heading">
     <div class="container">
       <div class="section-header section-header--center">
-        <h2>sumyca stay の使い方</h2>
+        <h2 id="how-heading">sumyca stay の使い方</h2>
         <p>3 ステップで予約完了。フロント不要。</p>
       </div>
       <div class="how-grid">
@@ -225,8 +438,10 @@
     </div>
   </section>
 
+  </main><!-- /main -->
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" aria-label="サイトフッター">
     <div class="footer__inner">
       <div>
         <div class="footer__brand">sumyca <span>stay</span></div>
