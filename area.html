@@ -225,6 +225,10 @@
         <a href="area.html" style="color:var(--dark);font-weight:700;">エリアガイド</a>
       </nav>
       <div class="header__actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
+          <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+        </div>
         <a href="search.html" class="btn btn--accent btn--sm">今すぐ予約する</a>
         <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
           <span></span><span></span><span></span>
@@ -352,5 +356,12 @@
     </div>
   </footer>
 
+  <script>
+    function setLang(lang, btn) {
+      document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
 </body>
 </html>

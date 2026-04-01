@@ -230,6 +230,10 @@
         <a href="area.html">エリアガイド</a>
       </nav>
       <div class="header__actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
+          <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+        </div>
         <a href="search.html" class="btn btn--accent btn--sm">今すぐ予約する</a>
         <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
           <span></span><span></span><span></span>
@@ -248,6 +252,15 @@
     <div class="mobile-menu__actions">
       <a href="search.html" class="btn btn--accent btn--lg btn--block">今すぐ予約する</a>
     </div>
+  </div>
+
+  <!-- Mobile sticky bottom CTA (appears after hero scrolls off) -->
+  <div class="mobile-cta-bar" id="mobileCta" role="complementary" aria-label="予約バー">
+    <div class="mobile-cta-bar__price">
+      <div class="mobile-cta-bar__from">最安値から</div>
+      <div class="mobile-cta-bar__num">¥14,280<span style="font-size:0.8rem;font-weight:400;color:var(--gray-3)">/泊</span></div>
+    </div>
+    <a href="search.html" class="btn btn--accent btn--md" style="flex-shrink:0;">今すぐ予約する</a>
   </div>
 
   <main id="main-content">
@@ -476,5 +489,28 @@
     </div>
   </footer>
 
+  <script>
+    // Mobile CTA bar: show when hero scrolls out
+    (function(){
+      var bar = document.getElementById('mobileCta');
+      var hero = document.querySelector('.hero');
+      function check(){
+        if(!hero||!bar) return;
+        var rect = hero.getBoundingClientRect();
+        if(rect.bottom < 60) { bar.classList.add('visible'); }
+        else { bar.classList.remove('visible'); }
+      }
+      window.addEventListener('scroll', check, {passive:true});
+      check();
+    })();
+
+    // Language toggle
+    function setLang(lang, btn) {
+      document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.documentElement.lang = lang;
+      // TODO: swap visible text nodes when i18n strings are wired up
+    }
+  </script>
 </body>
 </html>
