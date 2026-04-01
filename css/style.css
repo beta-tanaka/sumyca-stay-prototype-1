@@ -639,25 +639,47 @@ body {
 .lang-toggle {
   display: flex;
   align-items: center;
-  gap: 2px;
-  background: var(--gray-1);
-  border-radius: 20px;
-  padding: 3px;
-  border: 1px solid var(--gray-2);
 }
 .lang-btn {
-  padding: 4px 10px;
+  padding: 4px 9px;
   font-size: 0.7rem;
   font-weight: 700;
-  border-radius: 16px;
   border: none;
   background: transparent;
   color: var(--gray-3);
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
   font-family: var(--font);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  transition: color 0.15s;
 }
-.lang-btn.active { background: var(--teal); color: var(--white); }
+.lang-btn:first-child { border-right: 1px solid var(--gray-2); }
+.lang-btn.active { color: var(--teal); }
+.lang-btn:hover:not(.active) { color: var(--dark); }
+/* ヘッダー内ではモバイルで非表示 → モバイルメニューに移動 */
+@media (max-width: 768px) { .header__actions .lang-toggle { display: none; } }
+
+/* モバイルメニュー内のlang-toggle */
+.mobile-menu__lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-2);
+  margin-bottom: 4px;
+}
+.mobile-menu__lang .lang-btn {
+  font-size: 0.875rem;
+  padding: 8px 20px;
+  border-radius: var(--r-sm);
+  color: var(--gray-4);
+  letter-spacing: 0.05em;
+}
+.mobile-menu__lang .lang-btn.active {
+  background: var(--teal-bg);
+  color: var(--teal);
+}
+.mobile-menu__lang .lang-btn:first-child { border-right: none; }
 
 /* ---- Mobile sticky bottom CTA (index hero) ---- */
 .mobile-cta-bar {
@@ -697,6 +719,14 @@ body {
 @media (max-width: 900px) {
   .booking-sticky-bar { display: flex; }
   .has-booking-bar { padding-bottom: 76px; }
+}
+/* index: モバイルCTAバーが出たときのフッター押し下げ */
+@media (max-width: 768px) {
+  .cta-bar-active .footer { padding-bottom: 76px; }
+}
+/* search: フィルターFABがフッターを隠さないよう余白 */
+@media (max-width: 900px) {
+  .search-layout { padding-bottom: 80px; }
 }
 .booking-sticky-bar__left {}
 .booking-sticky-bar__price { font-size: 1.25rem; font-weight: 900; }
