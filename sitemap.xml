@@ -20,6 +20,14 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://beta-tanaka.github.io/sumyca-stay-prototype-1/search.html"/>
   </url>
 
+  <!-- エリアガイド -->
+  <url>
+    <loc>https://beta-tanaka.github.io/sumyca-stay-prototype-1/area.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- 物件詳細（デザイナーズ 1LDK 原宿） -->
   <url>
     <loc>https://beta-tanaka.github.io/sumyca-stay-prototype-1/property-detail.html</loc>
