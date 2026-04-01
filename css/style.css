@@ -9,16 +9,30 @@ a { color: inherit; text-decoration: none; }
 button { cursor: pointer; font-family: inherit; }
 
 :root {
-  --black:  #111111;
-  --white:  #FFFFFF;
-  --coral:  #E8665A;
-  --pink:   #F5BAB4;
-  --gray-1: #F7F5F3;
-  --gray-2: #E8E5E2;
-  --gray-3: #999999;
-  --gray-4: #555555;
-  --green:  #16a34a;
-  --star:   #f59e0b;
+  /* === sumyca stay カラーシステム ===
+     sumyca.com のティール(#009C96)を参照しつつ、より深みのあるトーンへ。
+     CTAにアンバーを使い、numa(黒+コーラル)との差別化を図る。
+  */
+
+  /* Brand */
+  --teal:     #0D6E6E;   /* primary — sumyca teal を深く、より落ち着いたトーンに */
+  --teal-lt:  #1A8C8C;   /* hover / lighter variant */
+  --teal-dark:#093F3F;   /* dark sections, headings on dark bg */
+  --teal-bg:  #EEF8F8;   /* very light mint — nods to sumyca's #eef6f5 */
+  --amber:    #D4873A;   /* CTA accent — warm, unique, separates from numa coral */
+  --amber-lt: #E0964E;   /* amber hover */
+  --dark:     #0A2828;   /* deep teal-black (replaces pure black) */
+  --white:    #FFFFFF;
+
+  /* Neutrals — teal-tinted grays */
+  --gray-1:   #F5FAFA;   /* lightest bg */
+  --gray-2:   #D8EBEB;   /* borders */
+  --gray-3:   #7A9E9E;   /* secondary text */
+  --gray-4:   #3D5E5E;   /* body text */
+
+  /* Semantic */
+  --green:    #16a34a;
+  --star:     #f59e0b;
 
   --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --r-sm: 8px;
@@ -42,7 +56,7 @@ body {
 /* ---- Layout ---- */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .section { padding: 80px 24px; }
-.section--gray { background: var(--gray-1); }
+.section--gray { background: var(--teal-bg); }
 
 /* ---- Buttons ---- */
 .btn {
@@ -68,9 +82,12 @@ body {
 .btn--xl  { padding: 18px 48px; font-size: 1.0625rem; }
 .btn--block { width: 100%; }
 
-.btn--accent  { background: var(--coral); color: var(--white); }
-.btn--black   { background: var(--black); color: var(--white); }
-.btn--outline { background: transparent; border: 2px solid currentColor; color: var(--black); }
+.btn--accent  { background: var(--amber); color: var(--white); }
+.btn--accent:hover { background: var(--amber-lt); opacity: 1; }
+.btn--teal    { background: var(--teal); color: var(--white); }
+.btn--teal:hover { background: var(--teal-lt); opacity: 1; }
+.btn--black   { background: var(--dark); color: var(--white); }
+.btn--outline { background: transparent; border: 2px solid currentColor; color: var(--dark); }
 .btn--outline-white { background: transparent; border: 2px solid rgba(255,255,255,0.5); color: var(--white); }
 .btn--ghost   { background: transparent; color: var(--gray-4); }
 
@@ -96,10 +113,10 @@ body {
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: -0.03em;
-  color: var(--black);
+  color: var(--dark);
   flex-shrink: 0;
 }
-.header__logo span { color: var(--coral); }
+.header__logo span { color: var(--teal); }
 
 .header__nav {
   display: flex;
@@ -115,8 +132,8 @@ body {
   border-radius: var(--r-sm);
   transition: background 0.15s, color 0.15s;
 }
-.header__nav a:hover { background: var(--gray-1); color: var(--black); }
-.header__nav a.active { color: var(--black); font-weight: 700; }
+.header__nav a:hover { background: var(--teal-bg); color: var(--teal); }
+.header__nav a.active { color: var(--teal); font-weight: 700; }
 
 .header__actions {
   display: flex;
@@ -132,7 +149,7 @@ body {
   border: none;
   padding: 8px;
 }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); border-radius: 2px; }
 
 @media (max-width: 768px) {
   .header__nav { display: none; }
@@ -164,7 +181,7 @@ body {
   margin-bottom: 16px;
 }
 .mobile-menu__logo { font-size: 1.5rem; font-weight: 900; margin-bottom: 24px; }
-.mobile-menu__logo span { color: var(--coral); }
+.mobile-menu__logo span { color: var(--teal); }
 .mobile-menu__nav { display: flex; flex-direction: column; }
 .mobile-menu__nav a {
   padding: 16px 0;
@@ -190,7 +207,7 @@ body {
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background: linear-gradient(160deg, #0f0f0f 0%, #1a1010 100%);
+  background: linear-gradient(160deg, #051818 0%, #0a2828 100%);
 }
 .hero__img {
   position: absolute; inset: 0;
@@ -229,7 +246,7 @@ body {
   letter-spacing: -0.03em;
   margin-bottom: 20px;
 }
-.hero__title em { color: var(--pink); font-style: normal; }
+.hero__title em { color: #7DD8D8; font-style: normal; } /* light teal highlight */
 .hero__sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
   opacity: 0.8;
@@ -257,7 +274,7 @@ body {
   border-right: 1px solid var(--gray-2);
 }
 .search-bar__field:last-of-type { border-right: none; }
-.search-bar__label { font-size: 0.7rem; font-weight: 700; color: var(--black); letter-spacing: 0.04em; text-transform: uppercase; }
+.search-bar__label { font-size: 0.7rem; font-weight: 700; color: var(--teal); letter-spacing: 0.04em; text-transform: uppercase; }
 .search-bar__val { font-size: 0.875rem; color: var(--gray-3); margin-top: 2px; }
 .search-bar__btn { flex-shrink: 0; border-radius: var(--r-lg) !important; padding: 12px 20px !important; gap: 6px; }
 .search-bar__btn svg { width: 16px; height: 16px; }
@@ -374,7 +391,7 @@ body {
 .how-card { text-align: center; padding: 0 16px; }
 .how-card__num {
   width: 48px; height: 48px;
-  background: var(--black);
+  background: var(--teal);
   color: var(--white);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
@@ -386,7 +403,7 @@ body {
 
 /* ---- Direct booking CTA ---- */
 .direct-cta {
-  background: var(--black);
+  background: var(--dark);
   color: var(--white);
   border-radius: var(--r-xl);
   padding: 60px 48px;
@@ -397,13 +414,13 @@ body {
   flex-wrap: wrap;
 }
 .direct-cta__text h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 900; margin-bottom: 8px; }
-.direct-cta__text h2 em { color: var(--pink); font-style: normal; }
+.direct-cta__text h2 em { color: #7DD8D8; font-style: normal; }
 .direct-cta__text p { color: rgba(255,255,255,0.65); font-size: 0.9375rem; }
 .direct-cta__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ---- Footer ---- */
 .footer {
-  background: var(--black);
+  background: var(--dark);
   color: rgba(255,255,255,0.7);
   padding: 60px 24px 40px;
   font-size: 0.875rem;
@@ -419,7 +436,7 @@ body {
 }
 @media (max-width: 768px) { .footer__inner { grid-template-columns: 1fr; gap: 32px; } }
 .footer__brand { font-size: 1.25rem; font-weight: 900; color: var(--white); letter-spacing: -0.02em; margin-bottom: 12px; }
-.footer__brand span { color: var(--coral); }
+.footer__brand span { color: #7DD8D8; }
 .footer__desc { line-height: 1.7; max-width: 280px; }
 .footer__col h4 { font-weight: 700; color: var(--white); font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
 .footer__col a { display: block; padding: 5px 0; color: rgba(255,255,255,0.6); transition: color 0.15s; }
@@ -455,13 +472,13 @@ body {
 .filter-group:last-child { border-bottom: none; }
 .filter-group__label { font-size: 0.9375rem; font-weight: 700; margin-bottom: 14px; }
 .filter-opt { display: flex; align-items: center; gap: 10px; padding: 6px 0; cursor: pointer; }
-.filter-opt input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--coral); cursor: pointer; }
+.filter-opt input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--teal); cursor: pointer; }
 .filter-opt span { font-size: 0.875rem; }
 .filter-price { display: flex; gap: 10px; align-items: center; }
 .filter-price input {
   flex: 1; padding: 10px 14px; border: 2px solid var(--gray-2); border-radius: var(--r-sm); font-size: 0.875rem; font-family: var(--font);
 }
-.filter-price input:focus { outline: none; border-color: var(--coral); }
+.filter-price input:focus { outline: none; border-color: var(--teal); }
 .filter-price span { color: var(--gray-3); flex-shrink: 0; }
 
 .results-header {
@@ -474,7 +491,7 @@ body {
   padding: 10px 16px; border: 2px solid var(--gray-2); border-radius: var(--r-sm);
   font-size: 0.875rem; font-family: var(--font); background: var(--white); cursor: pointer;
 }
-.sort-select:focus { outline: none; border-color: var(--coral); }
+.sort-select:focus { outline: none; border-color: var(--teal); }
 
 .results-grid { display: flex; flex-direction: column; gap: 16px; }
 .result-card {
@@ -532,7 +549,7 @@ body {
 .detail-main__title { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 900; margin-bottom: 8px; line-height: 1.2; }
 .detail-main__location { color: var(--gray-4); margin-bottom: 16px; display: flex; align-items: center; gap: 6px; }
 .detail-main__meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 0.875rem; color: var(--gray-4); margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--gray-2); }
-.detail-main__meta strong { color: var(--black); }
+.detail-main__meta strong { color: var(--dark); }
 
 .detail-section { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--gray-2); }
 .detail-section:last-child { border-bottom: none; }
@@ -581,8 +598,8 @@ body {
 }
 .booking-date-field { padding: 12px 16px; cursor: pointer; }
 .booking-date-field:first-child { border-right: 1px solid var(--gray-2); }
-.booking-date-field:hover { background: var(--gray-1); }
-.booking-date-field__label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.booking-date-field:hover { background: var(--teal-bg); }
+.booking-date-field__label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--teal); }
 .booking-date-field__val { font-size: 0.9375rem; font-weight: 600; margin-top: 2px; }
 .booking-date-field__val--empty { color: var(--gray-3); font-weight: 400; }
 
@@ -594,7 +611,7 @@ body {
   margin-bottom: 16px;
   display: flex; justify-content: space-between; align-items: center;
 }
-.booking-guest-field:hover { background: var(--gray-1); }
+.booking-guest-field:hover { background: var(--teal-bg); }
 
 .booking-breakdown { font-size: 0.875rem; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
 .booking-breakdown__row { display: flex; justify-content: space-between; }
@@ -602,12 +619,13 @@ body {
 .booking-breakdown__save { color: var(--green); font-weight: 700; }
 
 .booking-widget__ota {
-  background: #fef9c3;
+  background: var(--teal-bg);
   border-radius: var(--r-sm);
   padding: 10px 14px;
   font-size: 0.8125rem;
   text-align: center;
   margin-bottom: 14px;
-  color: #78350f;
+  color: var(--teal-dark);
+  border: 1px solid var(--gray-2);
 }
 .booking-widget__ota strong { font-weight: 800; }
