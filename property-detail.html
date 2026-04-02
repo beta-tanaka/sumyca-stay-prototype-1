@@ -152,12 +152,7 @@
         <a href="search.html">物件を探す</a>
         <a href="area.html">エリアガイド</a>
       </nav>
-      <div class="header__actions">
-        <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
-          <button class="lang-btn" onclick="setLang('en',this)">EN</button>
-        </div>
-        <a href="search.html" class="btn btn--accent btn--sm">今すぐ予約する</a>
+      <div class="header__actions">        <a href="search.html" class="btn btn--accent btn--sm">今すぐ予約する</a>
         <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
           <span></span><span></span><span></span>
         </button>
@@ -167,12 +162,7 @@
 
   <div class="mobile-menu" id="mm">
     <button class="mobile-menu__close" onclick="document.getElementById('mm').classList.remove('open')">✕</button>
-    <div class="mobile-menu__logo">sumyca <span>stay</span></div>
-    <div class="mobile-menu__lang">
-      <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
-      <button class="lang-btn" onclick="setLang('en',this)">EN</button>
-    </div>
-    <nav class="mobile-menu__nav">
+    <div class="mobile-menu__logo">sumyca <span>stay</span></div>    <nav class="mobile-menu__nav">
       <a href="search.html">物件を探す</a>
       <a href="area.html">エリアガイド</a>
     </nav>
@@ -431,10 +421,7 @@
 
   <script>
     // Add bottom padding on mobile so sticky bar doesn't cover content
-    if(window.innerWidth <= 900) document.body.classList.add('has-booking-bar');
-
-    function setLang(lang, btn) {
-      document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.remove('active'); });
+    if(window.innerWidth <= 900) document.body.classList.add('has-booking-bar'););
       btn.classList.add('active');
       document.documentElement.lang = lang;
     }

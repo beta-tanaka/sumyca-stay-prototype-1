@@ -279,12 +279,7 @@
       <nav class="header__nav">
         <a href="property-detail.html">← 物件詳細に戻る</a>
       </nav>
-      <div class="header__actions">
-        <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
-          <button class="lang-btn" onclick="setLang('en',this)">EN</button>
-        </div>
-        <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
+      <div class="header__actions">        <button class="hamburger" onclick="document.getElementById('mm').classList.add('open')" aria-label="メニュー">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -293,12 +288,7 @@
 
   <div class="mobile-menu" id="mm">
     <button class="mobile-menu__close" onclick="document.getElementById('mm').classList.remove('open')">✕</button>
-    <div class="mobile-menu__logo">sumyca <span>stay</span></div>
-    <div class="mobile-menu__lang">
-      <button class="lang-btn active" onclick="setLang('ja',this)">JP</button>
-      <button class="lang-btn" onclick="setLang('en',this)">EN</button>
-    </div>
-    <nav class="mobile-menu__nav">
+    <div class="mobile-menu__logo">sumyca <span>stay</span></div>    <nav class="mobile-menu__nav">
       <a href="search.html">物件を探す</a>
       <a href="area.html">エリアガイド</a>
     </nav>
@@ -536,12 +526,6 @@
   </main>
 
   <script>
-    function setLang(lang, btn) {
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.documentElement.lang = lang;
-    }
-
     function selectTrack(track, btn) {
       document.querySelectorAll('.track-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
